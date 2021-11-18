@@ -1,7 +1,7 @@
 #prints de boas vindas ao jogo.
 def boas_vindas():
     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-    print('    Bem vindo à AVENTURA NO CASTELO ')
+    print('Bem vindo à AVENTURA NO CASTELO RAVENLOFT')
     print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 
     print('     ESCOLHA O SEU JOGADOR    ')
@@ -154,7 +154,7 @@ def fase_4_trevor():
  notar ao seu redor a pessoa que você persegue está nas escadas a usa frente, um homem pálido e de 
  aparência um tanto sinistra e com uma expressão de frustração ao ver o seu êxito diz:
 
-“Foi um erro vir até aqui caçador!!”
+“Foi um erro vir até aqui caçador!!!”
 
 O que você faz?
 
@@ -172,7 +172,7 @@ O que você faz?
  instante o vampiro na escada aciona um mecanismo na parede que ativa uma armadilha, do teto
  começa a cair inúmeras pedras encima de você… parece que esse é seu fim.''')
     else:
-        print('Game Over 2')
+        print('Game Over')
 
 
 
@@ -180,44 +180,83 @@ O que você faz?
 
 
 def fase_1_strahd():
+    print('''Você se encontra sentando em seus aposentos do seu castelo até que é possível ouvir um falatório vindo do salão próximo dali…o que você faz?
+
+
+[1] Continua sentado
+[2] Ir verificar o que aconteceu.
+[3] Ir embora''')
     escolha = escolha_jogador()
-    if escolha == 1:
+    if escolha == 2:
         fase_2_strahd()
-    elif escolha == 2:
-        print('Game Over 1')
+    elif escolha == 1:
+        print('''Você continua sentando confortável em sua cadeira quando você sente algo perfurando suas costas
+Atravessando o seu coração enquanto sua vista vai escurecendo…parece que esse é seu fim!''')
     else:
-        print('Game Over 2')
+        print('Game Over')
 
 
 def fase_2_strahd():
+    print('''Você se levanta e vai verificar o salão e percebe duas pessoas no centro dele, e ao chão mais uma 
+Que esta imersa em um possa de sangue com uma estaca cravada em seu peito.
+O que você faz?
+
+[1] Mostre sua presença
+[2] Você usa seus poderes vampirescos para atacá-los rapidamente.
+[3] Ir embora''')
     escolha = escolha_jogador()
-    if escolha == 2:
+    if escolha == 1:
         fase_3_strahd()
-    elif escolha == 1:
-        print('Game Over 1')
+    elif escolha == 2:
+        print('''Antes que eles percebam, você ataca com suas garras fazem suas cabeças rolarem pelo chão…
+parece que este é o FIM deles!!!''')
     else:
-        print('Game Over 2')
+        print('Game Over')
 
 
 def fase_3_strahd():
+    print('''Você faz com que sua presença seja notada, ambos olham para você porém um deles aponta para você e diz “Morra monstro, você não pertence a esse mundo!”
+
+O que você faz?
+
+[1] Concordar com ele
+[2] Dizer: “Não foi por minha mão que eu fui trazido a carne novamente, foram os humanos que me trouxeram de volta para me oferecer tributos.”
+[3] Ir embora''')
     escolha = escolha_jogador()
-    if escolha == 1:
-        fase_4_trevor()
-    elif escolha == 2:
-        print('Game Over 1')
+    if escolha == 2:
+        fase_4_strahd()
+    elif escolha == 1:
+        print('''Você concorda com ele, a muito você reflete que a sua existência é uma abominação da natureza
+então você se deixa derrotar e aceita o seu destino...parece que este é o seu Fim!!!''')
     else:
-        print('Game Over 2')
+        print('Game Over')
 
 
 def fase_4_strahd():
-    escolha = escolha_jogador()
-    if escolha == 2:
-        print('Final 1')
-    elif escolha == 1:
-        print('Final 2')
-    else:
-        print('Game Over 2')
+    print('''O homem responde novamente: “Tributos!? Você rouba a alma das pessoas e os trona seus
+Escravos!!! Mas chega de conversa…Prepare-se!!!” Ele saca sua espada e com outra estaca nas
+mão ele parte em sua direção.
 
+O que você faz?
+
+
+[1] Você usa um de seus poderes e conjura uma bola de fogo e arremessa contra eles.
+[2] Você usa seus poderes para se mover em uma extrema velocidade e ataca eles com usas garras.
+[3] Ir embora.''')
+    escolha = escolha_jogador()
+    if escolha == 1:
+        print('''A bola de fogo acerta em cheio todos na sala, queimando tudo e a todos nela, inclusive as cortinas que 
+cobriam as janelas, assim você percebe que está amanhecendo, você só tem um segundo pra reparar a 
+belasa do sol nascente antes de seu corpo ser engolido em chamas por entrar em contato com o sol…
+
+Então este é o FIM...''')
+    elif escolha == 2:
+        print('''Você avança rapidamente com sua velocidade sobre humana, porém o caçador estava preparado e 
+utilizando um símbolo sagrado quem estava em seu colar faz com que seu corpo fique completamente
+imóvel, fazendo com que seja fácil empurrar a estaca através de seu frio e seco coração...para que esse
+é seu FIM!''')
+    else:
+        print('Game Over')
 
 
 #Sequencia de fases do jogo.
