@@ -12,11 +12,19 @@ def boas_vindas():
 [3] Strahd''')
 
 
+def verifica_numero(numero):
+    if numero.isnumeric():
+        return int(numero)
+    else:
+        return 0
+
 #logica de escolhas
 def escolha_jogador():
-    jogador = int(input('Escolha o numero das opçoes: \n'))
+    jogador = input('Escolha o numero das opçoes: \n')
+    jogador = verifica_numero(jogador)
     while jogador > 3 or jogador < 1:
-        jogador = int(input('Escolha o numero das opçoes: \n'))
+        jogador = input('Escolha o numero das opçoes: \n')
+        jogador = verifica_numero(jogador)
     return jogador
 
 
@@ -25,6 +33,7 @@ def fase_1_leon():
     print('''Você se encontra no meio de um nevoeiro a procura do castelo Ravenloft, depois
 De horas procurando você se depara com um grande porta…sim é ela mesmo, a entrada do castelo…
 O que você faz?
+
 [1] Bate na porta
 [2] Procura uma nova entrada
 [3] ir embora''')
@@ -40,6 +49,7 @@ O que você faz?
 def fase_2_leon():
     print('''Você procura outra entrada e vê que parte de trás do castelo existe outro caminho que leva ao um bosque
 e também o que parece ser outra entrada para o castelo…
+
 [1] Seguir em direção ao bosque.
 [2] Abrir a porta e entrar.
 [3] Ir embora.''')
@@ -58,7 +68,6 @@ def fase_3_leon():
 Paredes do enorme castelo, tentando identificar a direção você segue e vê dois caminhos
 Um que leva até uma porta antiga e ornamentada e um uma grande escadaria que segua para a
 Parte superior do castelo.
-
 
 [1] Subir as escadas.
 [2] Seguir pela porta ornamentada.
@@ -132,7 +141,6 @@ def fase_3_trevor():
     print(''' Com um movimento rápido você incita o seu cavalo a correr mais do que nunca enquanto a porta
  levadiça está se fechando… o que você faz?
 
-
 [1] Continua a fazer o cavalo correr o mais rápido possível.
 [2] Tenta salta do cavalo em direção da porta.
 [3] ir embora''')
@@ -158,7 +166,6 @@ def fase_4_trevor():
 
 O que você faz?
 
-
 [1] Não diz nada e arremessa uma de suas estacas nele.
 [2] Diz que “Você morrerá hoje vampiro!”
 [3] ir embora.''')
@@ -181,7 +188,6 @@ O que você faz?
 
 def fase_1_strahd():
     print('''Você se encontra sentando em seus aposentos do seu castelo até que é possível ouvir um falatório vindo do salão próximo dali…o que você faz?
-
 
 [1] Continua sentado
 [2] Ir verificar o que aconteceu.
